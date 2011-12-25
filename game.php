@@ -23,7 +23,7 @@
       </div>
       <div id="board3" class="board"></div>
       <p class="annot"></p>
-      <form>
+      <form method="post">
         <input type="text" name="Move" />
         <input type="submit" value="Submit" />
       </form>
@@ -32,51 +32,56 @@
 $db = new PDO('sqlite:chess.db');
 $result = $db->query('SELECT * FROM moves');
 $moveNumber = 0;
+$displayNumber = 0;
 foreach($result as $row)
 {
   if ($row[0] & 1) {
-    $moveNumber = $moveNumber + 1;
-    print "\t".$moveNumber.". ".$row['move'];
-  } 
+    $displayNumber = $displayNumber + 1;
+    print "\t".$displayNumber.". ".$row['move'];
+  }
   else {
     print " ".$row['move']."\n";
   }
+  $moveNumber = $moveNumber + 1;
 }
+
+if (($_POST['Move']) == 'Ne5') {
+  $num = $moveNumber + 1;
+  $move = $_POST['Move'];
+  $db->query("INSERT INTO moves (id, move) VALUES ('$num','$move')");
+}
+
 $db = NULL;
 ?>
       </pre>
     </div>
+<?php
 
+?>
   </div>
 </body>
-
 <script type="text/javascript">
 jQuery(function($) {
   function loadChessGame(container, options, callback) {
     var chess = $('.board', container).chess(options);
-
     $('.back', container).click(function() {
       chess.transitionBackward();
       $('.annot', container).text( chess.annotation() );
       return false;
     });
-
     $('.next', container).click(function() {
       chess.transitionForward();
       $('.annot', container).text( chess.annotation() );
       return false;
     });
-
     $('.flip', container).click(function() {
       chess.flipBoard();
       return false;
     });
-
     if ( typeof callback != "undefined" ) { callback(chess) };
   }
-
   loadChessGame( '#game', { pgn : $('#game0001').html() }, function(chess) {
-    chess.transitionTo(<?php print ($moveNumber*2) ?>)
+    chess.transitionTo(<?php print($moveNumber); ?>)
   });
 });
 </script>
