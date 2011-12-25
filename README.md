@@ -1,3 +1,7 @@
+# Super Simple Chess
+a soup to nuts chess engine based on jChess
+here is the jChess documentation:
+
 # jChess
 A jQuery based javascript library for parsing and displaying chess games. Currently takes FEN and PGN as inputs.
 
