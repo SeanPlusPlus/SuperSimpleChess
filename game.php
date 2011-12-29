@@ -35,7 +35,7 @@ foreach($result as $row)
 {
   if ($row[0] & 1) {
     $displayNumber = $displayNumber + 1;
-    print "\t".$displayNumber.". ".$row['move'];
+    print "\t  ".$displayNumber.". ".$row['move'];
   }
   else {
     print " ".$row['move']."\n";
