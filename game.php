@@ -39,6 +39,7 @@ foreach($result as $row)
   }
   else {
     print " ".$row['move']."\n";
+
   }
   $moveNumber = $moveNumber + 1;
 }
