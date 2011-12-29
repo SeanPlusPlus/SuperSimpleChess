@@ -15,10 +15,6 @@
   <div id="wrapper">
     <div id="game">
       <h1>Super Simple Chess</h1>
-      <div>
-        <a class="back" href="#">Back</a>
-        <a class="next" href="#">Next</a>
-      </div>
       <div id="board3" class="board"></div>
       <p class="annot"></p>
       <form name="move" method="post">
@@ -26,7 +22,7 @@
         <input type="submit" value="Submit"/>
       </form>
       <pre id="game0001">
-<?php
+<?
 $db = new PDO('sqlite:chess.db');
 $result = $db->query('SELECT * FROM moves');
 $moveNumber = 0;
@@ -44,9 +40,9 @@ foreach($result as $row)
   $moveNumber = $moveNumber + 1;
 }
 
-if (($_POST['move'])) {
+if (($_POST['move'])  ) {
     $num = $moveNumber + 1;
-    $move = $_POST['move'];
+    $move = htmlspecialchars($_POST['move']);
     $db->query("INSERT INTO moves (id, move) VALUES ('$num','$move')");
     $db = NULL;
     echo"<script>window.location.reload();</script>";
@@ -55,7 +51,13 @@ if (($_POST['move'])) {
 $db = NULL;
 ?>
       </pre>
+
+      <div id="controls">
+        <a class="back" href="#">&#171; back</a>
+        <a class="next" href="#">next &#187;</a>
+      </div>
     </div>
+
   </div>
 
 <script type="text/javascript">
@@ -78,9 +80,16 @@ jQuery(function($) {
     });
     if ( typeof callback != "undefined" ) { callback(chess) };
   }
-  loadChessGame( '#game', { pgn : $('#game0001').html() }, function(chess) {
-    chess.transitionTo(<?php print($moveNumber); ?>)
-  });
+
+<?
+  if($moveNumber>0) {
+    echo "loadChessGame( '#game', { pgn : $('#game0001').html() }, function(chess) { chess.transitionTo($moveNumber) });";
+  }
+  else {
+    echo "loadChessGame( '#game', {} );";
+  }
+?>
+
   if(loadChessGame) {
     //$('#exitStatus').html('fooBar');
   }
