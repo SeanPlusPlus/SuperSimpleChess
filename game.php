@@ -14,7 +14,8 @@
 <body>
   <div id="wrapper">
     <div id="game">
-      <h1>Super Simple Chess</h1>
+      <h1>Stephenson vs. Lamberto-Egan</h1>
+      <div id='exitStatus'></div>
       <div id="board3" class="board"></div>
       <p class="annot"></p>
       <form name="move" method="post">
@@ -81,23 +82,36 @@ jQuery(function($) {
     if ( typeof callback != "undefined" ) { callback(chess) };
   }
 
-<?
-  if($moveNumber>0) {
-    echo "loadChessGame( '#game', { pgn : $('#game0001').html() }, function(chess) { chess.transitionTo($moveNumber) });";
+  try {
+    <?
+      if($moveNumber>0) {
+        echo "loadChessGame( '#game', { pgn : $('#game0001').html() }, function(chess) { chess.transitionTo($moveNumber) });";
+      }
+      else {
+        echo "loadChessGame( '#game', {} );";
+      }
+    ?>
   }
-  else {
-    echo "loadChessGame( '#game', {} );";
+  catch(e) {
+    $('#game').hide();
+    $('#myErr').show();
+    <?
+    if (($_POST['undo'])) {
+      $db = new PDO('sqlite:chess.db');
+      $db->query("DELETE FROM moves WHERE id=$moveNumber");
+      $db = NULL;
+      echo "window.location.reload();";
+    }
+    ?>
   }
-?>
 
-  if(loadChessGame) {
-    //$('#exitStatus').html('fooBar');
-  }
-  else {
-    //$('#exitStatus').html('pontzWentz');
-  }
 });
 </script>
-<div id='exitStatus'></div>
+
+  <form id='myErr' name='undo' method='post'><input type='submit' value='ILLEGAL MOVE UNDO' name='undo' /></form>
+
+<script type="text/javascript">
+  jQuery('#myErr').hide();
+</script>
 </body>
 </html>
