@@ -14,7 +14,7 @@
 <body>
   <div id="wrapper">
     <div id="game">
-      <h1>Stephenson vs. Lamberto-Egan</h1>
+      <h1>Super Simple Chess</h1>
       <div id='exitStatus'></div>
       <div id="board3" class="board"></div>
       <p class="annot"></p>
