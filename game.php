@@ -23,7 +23,11 @@
         <input type="submit" value="Submit"/>
       </form>
       <pre id="game0001">
+
 	<!-- stoked -->
+
+      <!-- begin hacks yo Dude -->
+
 <?
 $db = new PDO('sqlite:chess.db');
 $result = $db->query('SELECT * FROM moves');
