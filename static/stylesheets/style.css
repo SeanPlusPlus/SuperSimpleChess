@@ -1,0 +1,27 @@
+ul.move-list {
+  margin:0px;
+}
+li.piece {
+  display:inline;
+  font-size:50px;
+  list-style:none;
+  color:black;
+  /*position:absolute;*/
+  padding:10px;
+}
+#position3 {
+  top:400px;
+}
+.light {
+width: 10px;
+height: 10px;
+margin: 0px;
+background-color: #DDD;
+}
+.dark {
+width: 10px;
+height: 10px;
+margin: 0px;
+background-color: #707070;
+}
+
