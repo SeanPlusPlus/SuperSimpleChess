@@ -13,111 +13,106 @@
 <div class="topbar">
   <div class="fill">
     <div class="container">
-      <a class="brand" href="#">Super Simple Chess</a>
+      <a class="brand" id="home" href="#">Super Simple Chess</a>
       <ul class="nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <!--<li class="active"><a href="#" id="home">Home</a></li>-->
+        <li><a href ="#" id="about">About</a></li>
       </ul>
     </div>
  </div>
   </div>
   <div class="container">
     <div class="hero-unit">
-      <div id="pieces"></div>
-
-      <table cellspacing="0px" cellpadding="0px">
-
-        <tr>
-        <td class="light" id="x8y8"></td>
-        <td class="dark"  id="x7y8"></td>
-        <td class="light" id="x6y8"></td>
-        <td class="dark"  id="x5y8"></td>
-        <td class="light" id="x4y8"></td>
-        <td class="dark"  id="x3y8"></td>
-        <td class="light" id="x2y8"></td>
-        <td class="dark"  id="x1y8"></td>
-        </tr>
-
-        <tr>
-        <td class="dark"  id="x8y7"></td>
-        <td class="light" id="x7y7"></td>
-        <td class="dark"  id="x6y7"></td>
-        <td class="light" id="x5y7"></td>
-        <td class="dark"  id="x4y7"></td>
-        <td class="light" id="x3y7"></td>
-        <td class="dark"  id="x2y7"></td>
-        <td class="light" id="x1y7"></td>
-        </tr>
-
-        <tr>
-        <td class="light" id="x8y6"></td>
-        <td class="dark"  id="x7y6"></td>
-        <td class="light" id="x6y6"></td>
-        <td class="dark"  id="x5y6"></td>
-        <td class="light" id="x4y6"></td>
-        <td class="dark"  id="x3y6"></td>
-        <td class="light" id="x2y6"></td>
-        <td class="dark"  id="x1y6"></td>
-        </tr>
-
-        <tr>
-        <td class="dark"  id="x8y5"></td>
-        <td class="light" id="x7y5"></td>
-        <td class="dark"  id="x6y5"></td>
-        <td class="light" id="x5y5"></td>
-        <td class="dark"  id="x4y5"></td>
-        <td class="light" id="x3y5"></td>
-        <td class="dark"  id="x2y5"></td>
-        <td class="light" id="x1y5"></td>
-        </tr>
-
-        <tr>
-        <td class="light" id="x8y4"></td>
-        <td class="dark"  id="x7y4"></td>
-        <td class="light" id="x6y4"></td>
-        <td class="dark"  id="x5y4"></td>
-        <td class="light" id="x4y4"></td>
-        <td class="dark"  id="x3y4"></td>
-        <td class="light" id="x2y4"></td>
-        <td class="dark"  id="x1y4"></td>
-        </tr>
-
-        <tr>
-        <td class="dark"  id="x8y3"></td>
-        <td class="light" id="x7y3"></td>
-        <td class="dark"  id="x6y3"></td>
-        <td class="light" id="x5y3"></td>
-        <td class="dark"  id="x4y3"></td>
-        <td class="light" id="x3y3"></td>
-        <td class="dark"  id="x2y3"></td>
-        <td class="light" id="x1y3"></td>
-        </tr>
-
-        <tr>
-        <td class="light" id="x8y2"></td>
-        <td class="dark"  id="x7y2"></td>
-        <td class="light" id="x6y2"></td>
-        <td class="dark"  id="x5y2"></td>
-        <td class="light" id="x4y2"></td>
-        <td class="dark"  id="x3y2"></td>
-        <td class="light" id="x2y2"></td>
-        <td class="dark"  id="x1y2"></td>
-        </tr>
-
-        <tr>
-        <td class="dark"  id="x8y1"></td>
-        <td class="light" id="x7y1"></td>
-        <td class="dark"  id="x6y1"></td>
-        <td class="light" id="x5y1"></td>
-        <td class="dark"  id="x4y1"></td>
-        <td class="light" id="x3y1"></td>
-        <td class="dark"  id="x2y1"></td>
-        <td class="light" id="x1y1"></td>
-        </tr>
-
-      </table>
-
+      <div id ="game">
+        <div id="pieces"></div>
+        <table cellspacing="0px" cellpadding="0px">
+          <tr>
+          <td class="light" id="x8y8"></td>
+          <td class="dark"  id="x7y8"></td>
+          <td class="light" id="x6y8"></td>
+          <td class="dark"  id="x5y8"></td>
+          <td class="light" id="x4y8"></td>
+          <td class="dark"  id="x3y8"></td>
+          <td class="light" id="x2y8"></td>
+          <td class="dark"  id="x1y8"></td>
+          </tr>
+          <tr>
+          <td class="dark"  id="x8y7"></td>
+          <td class="light" id="x7y7"></td>
+          <td class="dark"  id="x6y7"></td>
+          <td class="light" id="x5y7"></td>
+          <td class="dark"  id="x4y7"></td>
+          <td class="light" id="x3y7"></td>
+          <td class="dark"  id="x2y7"></td>
+          <td class="light" id="x1y7"></td>
+          </tr>
+          <tr>
+          <td class="light" id="x8y6"></td>
+          <td class="dark"  id="x7y6"></td>
+          <td class="light" id="x6y6"></td>
+          <td class="dark"  id="x5y6"></td>
+          <td class="light" id="x4y6"></td>
+          <td class="dark"  id="x3y6"></td>
+          <td class="light" id="x2y6"></td>
+          <td class="dark"  id="x1y6"></td>
+          </tr>
+          <tr>
+          <td class="dark"  id="x8y5"></td>
+          <td class="light" id="x7y5"></td>
+          <td class="dark"  id="x6y5"></td>
+          <td class="light" id="x5y5"></td>
+          <td class="dark"  id="x4y5"></td>
+          <td class="light" id="x3y5"></td>
+          <td class="dark"  id="x2y5"></td>
+          <td class="light" id="x1y5"></td>
+          </tr>
+          <tr>
+          <td class="light" id="x8y4"></td>
+          <td class="dark"  id="x7y4"></td>
+          <td class="light" id="x6y4"></td>
+          <td class="dark"  id="x5y4"></td>
+          <td class="light" id="x4y4"></td>
+          <td class="dark"  id="x3y4"></td>
+          <td class="light" id="x2y4"></td>
+          <td class="dark"  id="x1y4"></td>
+          </tr>
+          <tr>
+          <td class="dark"  id="x8y3"></td>
+          <td class="light" id="x7y3"></td>
+          <td class="dark"  id="x6y3"></td>
+          <td class="light" id="x5y3"></td>
+          <td class="dark"  id="x4y3"></td>
+          <td class="light" id="x3y3"></td>
+          <td class="dark"  id="x2y3"></td>
+          <td class="light" id="x1y3"></td>
+          </tr>
+          <tr>
+          <td class="light" id="x8y2"></td>
+          <td class="dark"  id="x7y2"></td>
+          <td class="light" id="x6y2"></td>
+          <td class="dark"  id="x5y2"></td>
+          <td class="light" id="x4y2"></td>
+          <td class="dark"  id="x3y2"></td>
+          <td class="light" id="x2y2"></td>
+          <td class="dark"  id="x1y2"></td>
+          </tr>
+          <tr>
+          <td class="dark"  id="x8y1"></td>
+          <td class="light" id="x7y1"></td>
+          <td class="dark"  id="x6y1"></td>
+          <td class="light" id="x5y1"></td>
+          <td class="dark"  id="x4y1"></td>
+          <td class="light" id="x3y1"></td>
+          <td class="dark"  id="x2y1"></td>
+          <td class="light" id="x1y1"></td>
+          </tr>
+        </table>
+      </div> <!-- game -->
+      <div id="aboutPage">
+        <h3>About</h3>
+        <script
+          src="http://gist-it.appspot.com/github/SeanPlusPlus/SuperSimpleChess/raw/master/README.md"></script>
+      </div><!-- about -->
     </div> <!-- hero-unit -->
     <footer>
       <p><i>a chess app for the stoked</i></p>
@@ -148,6 +143,20 @@
     }).appendTo('#pieces');
   });
 
+</script>
+<script>
+
+  $('#aboutPage').hide();
+
+  $('#about').click(function () {
+    $('#game').hide();
+    $('#aboutPage').show();
+  });
+
+  $('#home').click(function () {
+    $('#game').show();
+    $('#aboutPage').hide();
+  });
 </script>
 </body>
 </html>
