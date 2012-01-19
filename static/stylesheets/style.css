@@ -7,7 +7,6 @@ li.piece {
   list-style:none;
   color:black;
   position:absolute;
-  padding:10px;
 }
 .light {
 width: 10px;
@@ -24,23 +23,67 @@ background-color: #707070;
 
 /* POSITIONS */
 
-#position15 {
-  top:500px;
-  left:465px;
-}
-#position14 {
-  top:500px;
-  left:405px;
-}
-#position13 {
-  top:500px;
-  left:345px;
+#position11 {
+  top:512px;
+  left:227px;
 }
 #position12 {
-  top:500px;
-  left:285px;
+  top:512px;
+  left:289px;
 }
-#position11 {
-  top:500px;
-  left:225px;
+#position13 {
+  top:512px;
+  left:351px;
+}
+#position14 {
+  top:512px;
+  left:413px;
+}
+#position15 {
+  top:512px;
+  left:475px;
+}
+#position16 {
+  top:512px;
+  left:536px;
+}
+#position17 {
+  top:512px;
+  left:601px;
+}
+#position18 {
+  top:512px;
+  left:664px;
+}
+#position21 {
+  top:450px;
+  left:227px;
+}
+#position22 {
+  top:450px;
+  left:289px;
+}
+#position23 {
+  top:450px;
+  left:351px;
+}
+#position24 {
+  top:450px;
+  left:413px;
+}
+#position25 {
+  top:450px;
+  left:475px;
+}
+#position26 {
+  top:450px;
+  left:536px;
+}
+#position27 {
+  top:450px;
+  left:601px;
+}
+#position28 {
+  top:450px;
+  left:664px;
 }
