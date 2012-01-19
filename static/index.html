@@ -133,8 +133,8 @@
       //items.push('<li class="move">' + key + ': ' + val + '</li>');
     //});
 
-    $.each(dataSet, function(i, piece) {
-      items.push('<li class="piece" id="position' + i + '">' + piece + '</li>');
+    $.each(dataSet, function(position, piece) {
+      items.push('<li class="piece" id="position' + position + '">' + piece[0] + '</li>');
     });
 
     $('<ul/>', {

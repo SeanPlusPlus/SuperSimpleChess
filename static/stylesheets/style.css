@@ -6,11 +6,8 @@ li.piece {
   font-size:50px;
   list-style:none;
   color:black;
-  /*position:absolute;*/
+  position:absolute;
   padding:10px;
-}
-#position3 {
-  top:400px;
 }
 .light {
 width: 10px;
@@ -25,3 +22,25 @@ margin: 0px;
 background-color: #707070;
 }
 
+/* POSITIONS */
+
+#position15 {
+  top:500px;
+  left:465px;
+}
+#position14 {
+  top:500px;
+  left:405px;
+}
+#position13 {
+  top:500px;
+  left:345px;
+}
+#position12 {
+  top:500px;
+  left:285px;
+}
+#position11 {
+  top:500px;
+  left:225px;
+}
