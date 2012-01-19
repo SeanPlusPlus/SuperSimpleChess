@@ -13,10 +13,10 @@
 <div class="topbar">
   <div class="fill">
     <div class="container">
-      <a class="brand" id="home" href="#">Super Simple Chess</a>
+      <a class="brand" id="home" href="/">Super Simple Chess</a>
       <ul class="nav">
         <!--<li class="active"><a href="#" id="home">Home</a></li>-->
-        <li><a href ="#" id="about">About</a></li>
+        <!--<li><a href ="#" id="about">About</a></li>-->
       </ul>
     </div>
  </div>
@@ -108,11 +108,6 @@
           </tr>
         </table>
       </div> <!-- game -->
-      <div id="aboutPage">
-        <h3>About</h3>
-        <script src="http://gist-it.appspot.com/github/SeanPlusPlus/SuperSimpleChess/raw/master/README.md"></script>
-        <h3><a href="https://twitter.com/#!/SuperSimpleChes">Twitter</a></h3>
-      </div><!-- aboutPage -->
     </div> <!-- hero-unit -->
     <footer>
       <p><i>a chess app for the stoked</i></p>
@@ -133,20 +128,6 @@
       'class': 'move-list',
       html: items.join('')
     }).appendTo('#pieces');
-  });
-</script>
-<script>
-
-  $('#aboutPage').hide();
-
-  $('#about').click(function () {
-    $('#game').hide();
-    $('#aboutPage').show();
-  });
-
-  $('#home').click(function () {
-    $('#game').show();
-    $('#aboutPage').hide();
   });
 </script>
 </body>
