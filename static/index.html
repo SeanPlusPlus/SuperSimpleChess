@@ -122,27 +122,18 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.js"><\/script>')</script>
 <script>
-
   var dataSet = {};
-
   $.getJSON('/js/pieces.json', function(data) {
     var items = [];
     dataSet = data;
-
-    //$.each(dataSet, function(key, val) {
-      //items.push('<li class="move">' + key + ': ' + val + '</li>');
-    //});
-
     $.each(dataSet, function(position, piece) {
       items.push('<li class="piece" id="position' + position + '">' + piece[0] + '</li>');
     });
-
     $('<ul/>', {
       'class': 'move-list',
       html: items.join('')
     }).appendTo('#pieces');
   });
-
 </script>
 <script>
 
