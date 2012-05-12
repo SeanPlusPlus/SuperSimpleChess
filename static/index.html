@@ -104,7 +104,7 @@
           <td class="dark"  id="x4y1"></td>
           <td class="light" id="x3y1"></td>
           <td class="dark"  id="x2y1"></td>
-          <td class="light" id="x1y1"></td>
+          <td class="light" id="x1y1">&#9820;</td>
           </tr>
         </table>
       </div> <!-- game -->
@@ -122,12 +122,13 @@
     var items = [];
     dataSet = data;
     $.each(dataSet, function(position, piece) {
-      items.push('<li class="piece" id="position' + position + '">' + piece[0] + '</li>');
+     // items.push('<li class="piece" id="position' + position + '">' + piece[0] + '</li>');
+     console.log(piece[0]);
     });
-    $('<ul/>', {
-      'class': 'move-list',
-      html: items.join('')
-    }).appendTo('#pieces');
+    //$('<ul/>', {
+      //'class': 'move-list',
+      //html: items.join('')
+    //}).appendTo('#pieces');
   });
 </script>
 </body>

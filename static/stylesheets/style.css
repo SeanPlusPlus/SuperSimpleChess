@@ -1,24 +1,18 @@
-ul.move-list {
-  margin:0px;
-}
-li.piece {
-  display:inline;
-  font-size:50px;
-  list-style:none;
-  color:black;
-  position:absolute;
-}
 .light {
-width: 10px;
-height: 10px;
-margin: 0px;
-background-color: #DDD;
+  width:50px;
+  height:50px;
+  font-size:40px;
+  text-align:center;
+  vertical-align:middle;
+  background-color: #DDD;
 }
 .dark {
-width: 10px;
-height: 10px;
-margin: 0px;
-background-color: #707070;
+  width:50px;
+  height:50px;
+  font-size:40px;
+  text-align:center;
+  vertical-align:middle;
+  background-color: #707070;
 }
 
 /* POSITIONS */
