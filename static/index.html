@@ -109,9 +109,6 @@
         </table>
       </div> <!-- game -->
     </div> <!-- hero-unit -->
-    <footer>
-      <p><i>a chess app for the stoked</i></p>
-    </footer>
   </div> <!--! end of #container -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
@@ -122,7 +119,7 @@
     var items = [];
     dataSet = data;
     $.each(dataSet, function(position, piece) {
-      $('#' + position).html(piece[0]);
+      $('#' + position).html("<a class='figure' href='#'>" + piece[0] + "</a>");
     });
   });
 </script>
