@@ -1,19 +1,9 @@
 application: supersimplechess
-version: 2
+version: 1
 runtime: python
 api_version: 1
 
 handlers:
-#- url: /
-  #script: home.py
-
-#- url: /index\.html
-  #script: home.py
-
-#- url: /(.*\.(gif|png|jpg))
-  #static_files: static/\1
-  #upload: static/(.*\.(gif|png|jpg))
-
 - url: /api/.*
   script: app.py
 

@@ -35,9 +35,6 @@ $( document ).ready( function() {
 
         // destination
         if ( clickCount == 2 ) {
-          // remove figure from source
-
-          // place figure on destination
           destination = $( this );
           console.log( destination );
           $( this ).html( source.children( 'a' ) );
