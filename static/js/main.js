@@ -1,5 +1,5 @@
 $( document ).ready( function() {
-  $.getJSON( '/js/figures.json', function( data ) {
+  $.getJSON( '/js/data.json', function( data ) {
 
     drawBoard();
     placeFigures();
