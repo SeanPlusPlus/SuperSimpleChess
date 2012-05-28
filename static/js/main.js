@@ -1,16 +1,34 @@
 $( document ).ready( function() {
   $.getJSON( '/js/data.json', function( data ) {
 
-    drawBoard();
-    placeFigures();
-    moveFigures();
+    // default config
+    var playerColor = 0,
+        black = false;
 
-    function drawBoard() {
+    if ( black ) {
+      playerColor = 1;
+    }
+
+    function renderGame() {
+      drawBoard( playerColor );
+      placeFigures();
+      moveFigures();
+    }
+
+    function drawBoard(order) {
       $( 'tr' ).remove();
-      for ( rank = 8 ; rank > 0 ; rank-- ) {
-      // for ( rank = 1 ; rank < 9 ; rank++ ) {
+
+      if( order == 1 ) {
+        var overRide = 0;
+      }
+
+      for ( i = 8 ; i > 0 ; i-- ) {
+        var rank = i ;
+        if( order == 1 ) {
+          var rank = ( overRide += 1 ) ;
+        }
         var row = "<tr>";
-        if ( rank%2 == 0  ) {
+        if ( rank%2 == order ) {
           var primary = "light";
           var secondary = "dark";
         }
@@ -68,10 +86,10 @@ $( document ).ready( function() {
       });
     };
 
+    renderGame();
+
     $( '#cancelMove' ).click( function() {
-      drawBoard();
-      placeFigures();
-      moveFigures();
+      renderGame();
     });
 
     $( '#submitMove' ).click( function() {
