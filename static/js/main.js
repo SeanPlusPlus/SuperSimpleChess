@@ -8,6 +8,7 @@ $( document ).ready( function() {
     function drawBoard() {
       $( 'tr' ).remove();
       for ( rank = 8 ; rank > 0 ; rank-- ) {
+      // for ( rank = 1 ; rank < 9 ; rank++ ) {
         var row = "<tr>";
         if ( rank%2 == 0  ) {
           var primary = "light";
@@ -54,10 +55,12 @@ $( document ).ready( function() {
           // source square
           if ( clickCount == 1 ) {
             source = $( this );
+            sourceId = this.id;
           }
           // destination square
           if ( clickCount == 2 ) {
             destination = $( this );
+            destinationId = ( this.id );
             $( this ).html( source.children( 'a' ) );
             source.html();
           }
@@ -70,5 +73,12 @@ $( document ).ready( function() {
       placeFigures();
       moveFigures();
     });
+
+    $( '#submitMove' ).click( function() {
+      console.log( data );
+      console.log( sourceId );
+      console.log( destinationId );
+    });
+
   });
 });
