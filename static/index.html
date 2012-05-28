@@ -1,119 +1,36 @@
 <!doctype html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>SuperSimpleChess</title>
-  <meta name="description" content="a chess app for the stoked">
-  <meta name="author" content="sms420">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-  <link rel="stylesheet" href="/stylesheets/bootstrap-responsive.css">
-  <link rel="stylesheet" href="/stylesheets/docs.css">
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-<body>
- <div class="container">
-    <header class="jumbotron subhead" id="overview">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SuperSimpleChess</title>
+    <meta name="description" content="a chess app for the stoked">
+    <meta name="author" content="sms420">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/stylesheets/docs.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="jumbotron subhead" id="overview">
       <div class="subnav">
         <ul class="nav nav-pills">
           <li><a href="/">Super Simple Chess</a></li>
           <li><a href="#About">About</a></li>
         </ul>
       </div>
-    </header>
-
-    <div id="game" class="row">
-      <table cellspacing="0px" cellpadding="0px">
-        <tr>
-        <td class="light" id="a8"></td>
-        <td class="dark"  id="b8"></td>
-        <td class="light" id="c8"></td>
-        <td class="dark"  id="d8"></td>
-        <td class="light" id="e8"></td>
-        <td class="dark"  id="f8"></td>
-        <td class="light" id="g8"></td>
-        <td class="dark"  id="h8"></td>
-        </tr>
-        <tr>
-        <td class="dark"  id="a7"></td>
-        <td class="light" id="b7"></td>
-        <td class="dark"  id="c7"></td>
-        <td class="light" id="d7"></td>
-        <td class="dark"  id="e7"></td>
-        <td class="light" id="f7"></td>
-        <td class="dark"  id="g7"></td>
-        <td class="light" id="h7"></td>
-        </tr>
-        <tr>
-        <td class="light" id="a6"></td>
-        <td class="dark"  id="b6"></td>
-        <td class="light" id="c6"></td>
-        <td class="dark"  id="d6"></td>
-        <td class="light" id="e6"></td>
-        <td class="dark"  id="f6"></td>
-        <td class="light" id="g6"></td>
-        <td class="dark"  id="h6"></td>
-        </tr>
-        <tr>
-        <td class="dark"  id="a5"></td>
-        <td class="light" id="b5"></td>
-        <td class="dark"  id="c5"></td>
-        <td class="light" id="d5"></td>
-        <td class="dark"  id="e5"></td>
-        <td class="light" id="f5"></td>
-        <td class="dark"  id="g5"></td>
-        <td class="light" id="h5"></td>
-        </tr>
-        <tr>
-        <td class="light" id="a4"></td>
-        <td class="dark"  id="b4"></td>
-        <td class="light" id="c4"></td>
-        <td class="dark"  id="d4"></td>
-        <td class="light" id="e4"></td>
-        <td class="dark"  id="f4"></td>
-        <td class="light" id="g4"></td>
-        <td class="dark"  id="h4"></td>
-        </tr>
-        <tr>
-        <td class="dark"  id="a3"></td>
-        <td class="light" id="b3"></td>
-        <td class="dark"  id="c3"></td>
-        <td class="light" id="d3"></td>
-        <td class="dark"  id="e3"></td>
-        <td class="light" id="f3"></td>
-        <td class="dark"  id="g3"></td>
-        <td class="light" id="h3"></td>
-        </tr>
-        <tr>
-        <td class="light" id="a2"></td>
-        <td class="dark"  id="b2"></td>
-        <td class="light" id="c2"></td>
-        <td class="dark"  id="d2"></td>
-        <td class="light" id="e2"></td>
-        <td class="dark"  id="f2"></td>
-        <td class="light" id="g2"></td>
-        <td class="dark"  id="h2"></td>
-        </tr>
-        <tr>
-        <td class="dark"  id="a1"></td>
-        <td class="light" id="b1"></td>
-        <td class="dark"  id="c1"></td>
-        <td class="light" id="d1"></td>
-        <td class="dark"  id="e1"></td>
-        <td class="light" id="f1"></td>
-        <td class="dark"  id="g1"></td>
-        <td class="light" id="h1"></td>
-        </tr>
-      </table>
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Save changes</button>
-        <button class="btn">Cancel</button>
-      </div> <!-- form-actions -->
-    </div> <!-- game -->
-  </div> <!-- container -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-<script>window.jQuery || document.write('<script src="/js/libs/jquery.js"><\/script>')</script>
-<script src="/js/main.js"></script>
-</body>
+      </header>
+      <div id="game" class="row">
+        <table cellspacing="0px" cellpadding="0px"></table>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Save changes</button>
+          <button class="btn">Cancel</button>
+        </div> <!-- form-actions -->
+      </div> <!-- game -->
+    </div> <!-- container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/libs/jquery.js"><\/script>')</script>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
